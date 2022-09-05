@@ -1,0 +1,22 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+    - const visibilites_possibles = ['tous', 'auteurs'];
+
+block contenu
+    section
+        article
+            h1 Sichtbarkeit
+            form.fiche.petit(method="post")
+                h1 Sichtbarkeit ändern
+                if ! chapitre.publie
+                    p Das Kapitel wird erst nach der Veröffentlichung sichtbar sein.
+                select#visibilite_chapitre(name="visibilite")
+                    each visibilite_possible in visibilites_possibles
+                        if (chapitre.visibilite == visibilite_possible)
+                            option(value=`${visibilite_possible}`, selected)= visibilite_possible.slice(0, 1).toUpperCase() + visibilite_possible.slice(1)
+                        else
+                            option(value=`${visibilite_possible}`)= visibilite_possible.slice(0, 1).toUpperCase() + visibilite_possible.slice(1)
+                button(type="submit") Änderungen speichern

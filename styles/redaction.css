@@ -1,0 +1,32 @@
+#interface_redaction textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+#texte_redaction {
+    word-wrap: break-word;
+}
+
+.chapitre {
+    border-radius: 0.25px;
+
+    outline-offset: 0.25rem;
+}
+
+.mot,
+.phrase {
+    outline: solid 1px hsla(var(--teinte-secondaire), 88%, 44%, 5%);
+    outline-offset: -1px;
+
+    transition: 250ms;
+}
+
+.chapitre:hover .mot,
+.chapitre:hover .phrase {
+    outline: solid 1px hsla(var(--teinte-secondaire), 88%, 44%, 20%);
+}
+
+.chapitre:focus .mot,
+.chapitre:focus .phrase {
+    outline: solid 1px hsla(var(--teinte-secondaire), 88%, 44%, 50%);
+}

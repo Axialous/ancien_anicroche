@@ -1,0 +1,49 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/liste_chapitres.css")
+
+block contenu
+    section#compte
+        article.fiche
+            h1= session.utilisateur.pseudonyme 
+            p= session.utilisateur.adresse_mail
+            div.ligne.mini
+                a.bouton.attirant(href="/compte/deconnexion") Déconnexion
+                a.bouton(href="/compte/preferences") Préférences
+        article
+            h1 Travaux d'écriture
+            - var i = 0
+            each chapitre in chapitres
+                if ! chapitre.publie
+                    - i++
+            if i > 0
+                div.liste-chapitres
+                    each chapitre in chapitres
+                        if ! chapitre.publie
+                            a.fiche.petit(href=`/gestion/${chapitre._id}`)
+                                h1= chapitre.titre
+                                p= chapitre.resume
+            else
+                p Vous n'avez aucun travail en cours !
+                a.bouton.attirant(href="/ecriture") Créer 
+        article
+            h1 Histoires publiées
+            - var i = 0
+            each chapitre in chapitres
+                if chapitre.publie
+                    - i++
+            if i > 0
+                div.liste-chapitres
+                    each chapitre in chapitres
+                        if chapitre.publie
+                            - i++
+                            a.fiche.petit(href=`/gestion/${chapitre._id}`)
+                                h1= chapitre.titre
+                                p= chapitre.resume
+            else
+                p Vous n'avez encore publié aucune histoire !

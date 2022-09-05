@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60"
+   height="60"
+   viewBox="0 0 15.875 15.875"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="loupe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     showguides="false"
+     inkscape:zoom="6.4277912"
+     inkscape:cx="26.992165"
+     inkscape:cy="39.98263"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <font
+       horiz-adv-x="1024"
+       id="font1100"
+       inkscape:label="fonte 1"
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       vert-origin-x="512"
+       vert-origin-y="768"
+       vert-adv-y="1024">
+      <font-face
+         units-per-em="1024"
+         id="font-face1102"
+         font-family="SVGFont 1" />
+      <missing-glyph
+         d="M0,0h1000v1024h-1000z"
+         id="missing-glyph1104" />
+    </font>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path31315"
+       style="fill:#ffffff;fill-opacity:0.74624062;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25 10 A 14.999999 14.999999 0 0 0 10 25 A 14.999999 14.999999 0 0 0 25 40 A 14.999999 14.999999 0 0 0 32.804688 37.804688 L 45 50 L 50 50 L 50 45 L 37.804688 32.804688 A 14.999999 14.999999 0 0 0 40 25 A 14.999999 14.999999 0 0 0 25 10 z M 25 15 A 9.9999978 9.9999987 0 0 1 35 25 A 9.9999978 9.9999987 0 0 1 25 35 A 9.9999978 9.9999987 0 0 1 15 25 A 9.9999978 9.9999987 0 0 1 25 15 z "
+       transform="scale(0.26458333)" />
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+.liste-chapitres {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.liste-chapitres a {
+    flex-grow: 1;
+
+    padding: 1rem;
+
+    width: 16rem;
+    height: 10rem;
+}
+
+.liste-chapitres p {
+    text-indent: 1rem;
+}

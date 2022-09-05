@@ -1,0 +1,357 @@
+/* POLICES */
+
+* {
+    font-family: 'Merriweather', serif;
+}
+
+a, input, select, optgroup, option, textarea, button, label {
+    font-family: Arial, sans-serif;
+}
+
+code, pre {
+    font-family: Courier, monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'LexendExa', sans-serif;
+}
+
+strong, em, ins, del, b, i, q, s, u, small, dfn {
+    font-family: inherit;
+}
+
+
+
+/* TEXTES */
+
+h1 {
+    font-size: 2em;
+}
+
+p, a, input, select, textarea, button, label {
+    font-size: 1rem;
+}
+
+small,
+.petit {
+    font-size: 0.75em;
+}
+
+del {
+    color: hsl(0, 73%, 20%);
+    text-decoration: line-through solid;
+}
+
+ins {
+    color: hsl(120, 73%, 20%);
+    text-decoration: underline solid;
+}
+
+.souligne {
+    text-decoration: underline hsl(var(--teinte-secondaire), 7%, 50%);
+}
+
+::selection {
+    background-color: hsla(calc(var(--teinte-primaire) + 180), 100%, 25%, 50%);
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+/* BLOCS */
+
+html {
+    /* overflow-x: hidden; */
+    font-size: 17px;
+
+    background-color: hsl(var(--teinte-primaire), 69%, 95%);
+
+    transition: 125ms;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+main,
+main section,
+main article,
+main div,
+main aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flexible {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.debut {
+    justify-content: flex-start;
+}
+
+.fiche {
+    background: hsla(var(--teinte-primaire), 50%, 75%, 50%);
+
+    border: outset 5px hsl(var(--teinte-secondaire), 7%, 50%);
+    border-radius: 0.25px;
+
+    padding: 1rem;
+}
+
+a.fiche {
+    outline-offset: 0.25rem;
+}
+
+a.fiche:hover,
+a.fiche:focus {
+    border-color: hsl(var(--teinte-secondaire), 88%, 44%);
+    outline: solid 3px hsla(var(--teinte-secondaire), 88%, 44%, 50%);
+}
+
+main *.ligne {
+    flex-direction: row;
+}
+
+main *.ecartee {
+    justify-content: space-between;
+}
+
+main *.mini {
+    width: fit-content;
+}
+
+main *.ligne > * {
+    flex: 1;
+}
+
+.erreur {
+    background-color: hsl(calc(var(--teinte-primaire) + 180), 100%, 75%);
+
+    border: outset 5px hsl(calc(var(--teinte-primaire) + 180), 100%, 55%);
+
+    padding: 1rem;
+}
+
+#en-tete,
+#contenu,
+#pied-de-page {
+    padding: 1rem 5vw;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    #contenu *.ligne {
+        flex-direction: column;
+    }
+
+    #en-tete,
+    #contenu,
+    #pied-de-page {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 256px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+
+/* CONTENUS */
+
+a {
+    color: hsl(var(--teinte-secondaire), 88%, 44%);
+}
+
+a.bouton,
+button {
+    border-radius: 0.25rem;
+    
+    padding: 0.5rem;
+
+    width: fit-content;
+}
+
+.bouton:hover,
+.bouton:focus,
+button:hover,
+button:focus {
+    transform: scale(105%);
+}
+
+a.attirant {
+    font-weight: bold;
+
+    border: solid 2px hsl(var(--teinte-secondaire), 88%, 44%);
+
+    padding: calc(0.5rem - 2px);
+}
+
+
+
+/* ACTIVITÉ */
+
+a,
+button,
+label,
+input[type=checkbox] {
+    cursor: pointer;
+
+    transition: 125ms;
+}
+
+*:focus,
+label.input:focus-within {
+    z-index: 100;
+    
+    outline: solid 3px hsla(var(--teinte-secondaire), 88%, 44%, 50%);
+    outline-offset: 0;
+}
+
+
+
+/* MENUS */
+
+nav {
+    display: grid;
+    gap: 0.75rem;
+}
+
+
+
+/* FORMULAIRES */
+
+form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+form.barre {
+    grid-auto-flow: column;
+    gap: 0;
+}
+
+form.barre button:hover,
+form.barre button:focus {
+    transform: none;
+}
+
+form.barre > * {
+    border-radius: 0;
+}
+
+form.barre > *:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+form.barre > *:not(:last-child) {
+    flex: 1;
+}
+
+form.barre > *:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+#contenu form .ligne {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+}
+
+input[name=etiquette] {
+    width: 7rem;
+}
+
+input,
+select,
+textarea,
+label.input {
+    background-color: hsla(0, 0%, 100%, 75%);
+
+    border: solid 2px hsl(var(--teinte-secondaire), 88%, 44%);
+    border-radius: 0.25rem;
+
+    padding: 0.5rem;
+
+    transition: 125ms;
+}
+
+label {
+    font-style: oblique;
+}
+
+label.input {
+    display: flex;
+    flex-direction: column;
+    
+    color: hsl(var(--teinte-secondaire), 3%, 60%);
+}
+
+label.input * {
+    background-color: transparent;
+
+    border: none;
+    border-radius: 0;
+    outline: none;
+
+    padding: 0;
+}
+
+input[type=checkbox] {
+    border-radius: 0.3rem;
+}
+
+input[type=checkbox]:checked {
+    background-image: url('/images/icones/checke.svg');
+    background-size: cover;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button {
+    color: hsla(0, 0%, 100%, 75%);
+
+    background-color: hsl(var(--teinte-secondaire), 88%, 44%);
+
+    width: fit-content;
+}
+
+label.checkbox {
+    display: flex;
+    gap: 0.25rem;
+}
+
+::placeholder {
+    font-style: oblique;
+    color: hsl(var(--teinte-secondaire), 3%, 60%);
+}
+
+@media screen and (max-width: 512px) {
+    #contenu form .ligne {
+        grid-auto-flow: row;
+    }
+}

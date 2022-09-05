@@ -1,0 +1,27 @@
+extends ../etendues/base.pug
+
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/lecture.css")
+    link(rel="stylesheet", href="/styles/mise_en_page.css")
+
+block scripts
+    script(src="/scripts/decode.js")
+    script(src="/scripts/lecture.js")
+
+block contenu
+    button#bouton_fermeture
+    section#lecture
+        h1.titre= chapitre.titre
+        div.chapitre(id=`${chapitre._id}`)= chapitre.texte
+        if (session.utilisateur && chapitre.auteurs.includes(session.utilisateur.clef))
+            div#lecture-menu-auteurs
+                a.bouton.attirant(href=`/gestion/${chapitre._id}`) Management 
+                if ! chapitre.publie
+                    a.bouton.attirant(href=`/ecriture/${chapitre._id}`) Write
+        p#temporaire_fautes= JSON.stringify(fautes)
+        p#temporaire_utilisateur= JSON.stringify(session.utilisateur ? session.utilisateur : {})

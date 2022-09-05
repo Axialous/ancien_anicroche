@@ -1,0 +1,79 @@
+#bouton_fermeture {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    background-color: hsla(calc(var(--teinte-primaire) + 180), 44%, 44%, 15%);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0;
+
+    cursor: default;
+}
+
+#bouton_fermeture:hover {
+    transform: none;
+}
+
+#lecture {
+    align-items: center;
+}
+
+#lecture-menu-auteurs {
+    position: sticky;
+    flex-direction: row;
+    bottom: 1rem;
+}
+
+#lecture-menu-auteurs a {
+    background-color: hsl(var(--teinte-primaire), 69%, 95%);
+}
+
+.mot {
+    position: relative;
+}
+
+.mot:hover {
+    outline: solid 1px hsl(var(--teinte-secondaire), 88%, 44%);
+}
+
+.bulle {
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    z-index: 5;
+    transform: translate(-50%, 100%);
+
+    background-color: hsl(var(--teinte-secondaire), 88%, 77%);
+
+    border: solid 2px hsl(var(--teinte-secondaire), 88%, 44%);
+    border-radius: 0.5rem;
+
+    font-variant: normal;
+    text-indent: 0;
+
+    padding: 0.5rem;
+}
+
+.bulle .fleche {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    background-color: hsl(var(--teinte-secondaire), 88%, 44%);
+
+    width: 1rem;
+    height: 1.25rem;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+}

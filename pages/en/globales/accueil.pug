@@ -1,0 +1,18 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/liste_chapitres.css")
+
+block contenu
+    section
+        h1 Last chapters published:
+        div.liste-chapitres
+            each chapitre in chapitres
+                a.fiche.petit(href=`/lecture/${chapitre._id}`) 
+                    article 
+                        h1= chapitre.titre
+                        p= chapitre.resume

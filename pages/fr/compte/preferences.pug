@@ -1,0 +1,22 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/liste_chapitres.css")
+
+block contenu
+    section#compte
+        form.fiche.petit(method="post")
+            h1 Préférences
+            label.input(for="preference_langue") Langue
+                select#preference_langue(name="langue")
+                    - let langues = [['fr', 'Français'], ['en', 'English'], ['de', 'Deutsch']]
+                    each langue in langues
+                        if (session.langue == langue[0])
+                            option(value=`${langue[0]}`, selected)= langue[1]
+                        else
+                            option(value=`${langue[0]}`)= langue[1]
+            button(type="submit") Mettre à jour les préférences

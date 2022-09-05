@@ -1,0 +1,20 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block contenu
+    section#formulaire_connexion
+        div.ligne
+            form.fiche(method="post")
+                h1 Connexion
+                div.ligne
+                    label.input(for="adresse_mail_formulaire_connexion") Adresse mail
+                        input#adresse_mail_formulaire_connexion(name="adresse_mail" type="email", required)
+                    label.input(for="mot_de_passe_formulaire_connexion") Mot de passe
+                        input#mot_de_passe_formulaire_connexion(name="mot_de_passe" type="password", required)
+                button(type="submit") Connexion
+            div.fiche
+                h1 Nouvel utilisateur ?
+                a.bouton.attirant(href="/compte/inscription") S'inscrire

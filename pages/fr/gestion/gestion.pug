@@ -1,0 +1,28 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block contenu
+    section
+        article
+            h1 Gestion
+            div.fiche
+                div.petit
+                    h1 Actions
+                    div 
+                        if ! chapitre.publie
+                            div.ligne.mini
+                                a.bouton.attirant(href=`/gestion/${chapitre._id}/publication`) Publier
+                                a.bouton(href=`/ecriture/${chapitre._id}`) Écrire
+                        div.ligne.mini
+                            a.bouton.attirant(href=`/gestion/${chapitre._id}/suppression`) Supprimmer
+                            a.bouton(href=`/lecture/${chapitre._id}`)= chapitre.publie ? "Lire" : "Aperçu"
+                            a.bouton(href=`/gestion/${chapitre._id}/visibilite`) Modifier la visibilité (!{chapitre.visibilite})
+                            a.bouton(href=`/gestion/${chapitre.id}/etiquettes`) Gérer les étiquettes (!{chapitre.etiquettes.length})
+                form.petit(method="post")
+                    h1 Modifier les informations
+                    input#titre_redaction(name="titre", type="text", value=`${chapitre.titre}`, placeholder="Titre")
+                    textarea#resume_redaction(name="resume", cols="1", rows="1", placeholder="Résumé")= chapitre.resume
+                    button(type="submit") Enregistrer les modifications

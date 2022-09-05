@@ -1,0 +1,27 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/redaction.css")
+    link(rel="stylesheet", href="/styles/mise_en_page.css")
+
+block scripts
+    script(src="/scripts/decode.js")
+    script(src="/scripts/redaction.js")
+
+block contenu
+    section#interface_redaction
+        article.fiche
+            h1 Writing
+            form(method="post") 
+                input#titre_redaction(name="titre", type="text", value=`${chapitre.titre}`, placeholder="Title")
+                textarea#resume_redaction(name="resume", cols="1", rows="1", placeholder="Summary")= chapitre.resume
+                div
+                    textarea#texte_redaction(name="texte", cols="1", rows="1", spellcheck="false", placeholder="Story")= chapitre.texte
+                    div#affichage_texte_redaction.chapitre(tabindex="0")
+                div.ligne.mini
+                    button(type="submit") Save changes
+                    a.bouton.attirant(href=`/gestion/${chapitre._id}`) Management

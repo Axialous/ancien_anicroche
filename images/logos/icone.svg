@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="300"
+   viewBox="0 0 79.375 79.375"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="icone.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     showguides="false"
+     inkscape:zoom="1.4802102"
+     inkscape:cx="142.88511"
+     inkscape:cy="183.75769"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <font
+       horiz-adv-x="1024"
+       id="font1100"
+       inkscape:label="fonte 1"
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       vert-origin-x="512"
+       vert-origin-y="768"
+       vert-adv-y="1024">
+      <font-face
+         units-per-em="1024"
+         id="font-face1102"
+         font-family="SVGFont 1" />
+      <missing-glyph
+         d="M0,0h1000v1024h-1000z"
+         id="missing-glyph1104" />
+    </font>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#fbf1e9;stroke-width:0.467721;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       id="rect847"
+       width="66.145836"
+       height="66.145836"
+       x="6.6145835"
+       y="6.6145835" />
+    <path
+       id="path5534"
+       style="fill:#d4390e;fill-opacity:1;stroke:none;stroke-width:0.707108;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25 0 A 25.000001 49.999992 0 0 0 0 50 L 0 150 L 0 250 A 25.000001 49.999992 0 0 0 25 300 L 150 300 L 275 300 A 25.000001 49.999994 0 0 0 300 250 L 300 150 L 300 50 A 25.000001 49.999994 0 0 0 275 0 L 150 0 L 25 0 z M 100 50 L 150 50 L 200 50 L 200 250 L 150 200 L 100 250 L 100 50 z "
+       transform="scale(0.26458333)" />
+  </g>
+</svg>

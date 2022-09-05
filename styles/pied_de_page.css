@@ -1,0 +1,10 @@
+#pied-de-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: hsl(var(--teinte-primaire), 38%, 69%);
+
+    border-top: solid 2px hsl(var(--teinte-primaire), 71%, 65%);
+}

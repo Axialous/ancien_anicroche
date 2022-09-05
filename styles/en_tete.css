@@ -1,0 +1,93 @@
+#en-tete {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: hsl(var(--teinte-primaire), 71%, 75%);
+
+    border-bottom: solid 2px hsl(var(--teinte-primaire), 71%, 65%);
+
+    transition: 250ms;
+}
+
+#en-tete.reduit {
+    padding-top: 0.25rem;
+    padding-bottom: .25rem;
+}
+
+
+
+/* LOGO */
+
+#logo-anicroche {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3px;
+
+    border-radius: 0.25rem;
+    
+    padding: 3px;
+
+    width: min-content;
+}
+
+#logo-anicroche svg {
+    height: 2rem;
+    width: max-content;
+}
+
+.couleur-primaire {
+    fill: hsl(var(--teinte-primaire), 69%, 95%);
+}
+
+.couleur-secondaire {
+    fill: hsl(var(--teinte-secondaire), 88%, 44%);
+}
+
+
+
+/* BARRE DE RECHERCHE */
+
+#recherche-anicroche {
+    justify-content: center;
+}
+
+#recherche-anicroche input {
+    width: 300px;
+}
+
+#recherche-anicroche button {
+    background: url('/images/icones/loupe.svg') center no-repeat, hsl(var(--teinte-secondaire), 88%, 44%);
+    background-size: contain;
+
+    width: 4rem;
+}
+
+
+
+/* MENU DU COMPTE */
+
+#compte-anicroche {
+    grid-auto-flow: column;
+}
+
+
+
+/* RÈGLES @MEDIA */
+
+@media screen and (max-width: 1024px) {
+    #recherche-anicroche {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #logo-anicroche svg:nth-child(2) {
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block contenu
+    section
+        article.fiche
+            h1 Tags
+            if chapitre.etiquettes.length > 0
+                div.flexible.debut
+                    each etiquette in chapitre.etiquettes 
+                        form.barre(action=`/gestion/${chapitre._id}/etiquettes/suppression` method="post")
+                            input(name="etiquette" type="text" value=`${etiquette}` readonly)
+                            button(type="submit") Tag entfernen
+            form.barre.mini(action=`/gestion/${chapitre._id}/etiquettes/ajout` method ="post")
+                input.mini(name="etiquette" type="text" placeholder="Tag")
+                button(type="submit") Tag hinzufügen
+            a.bouton.attirant(href=`/gestion/${chapitre._id}`) Management

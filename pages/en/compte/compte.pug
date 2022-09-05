@@ -1,0 +1,49 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block styles
+    link(rel="stylesheet", href="/styles/liste_chapitres.css")
+
+block contenu
+    section#compte
+        article.fiche
+            h1= session.utilisateur.pseudonyme 
+            p= session.utilisateur.adresse_mail
+            div.ligne.mini
+                a.bouton.attirant(href="/compte/deconnexion") Logout
+                a.bouton(href="/compte/preferences") Preferences
+        article
+            h1 Writing work
+            - var i = 0
+            each chapitre in chapitres
+                if ! chapitre.publie
+                    - i++
+            if i > 0
+                div.liste-chapitres
+                    each chapitre in chapitres
+                        if ! chapitre.publie
+                            a.fiche.petit(href=`/gestion/${chapitre._id}`)
+                                h1= chapitre.titre
+                                p= chapitre.resume
+            else
+                p You don't have any work in progress!
+                a.bouton.attirant(href="/ecriture") Create 
+        article
+            h1 Published stories
+            - var i = 0
+            each chapitre in chapitres
+                if chapitre.publie
+                    - i++
+            if i > 0
+                div.liste-chapitres
+                    each chapitre in chapitres
+                        if chapitre.publie
+                            - i++
+                            a.fiche.petit(href=`/gestion/${chapitre._id}`)
+                                h1= chapitre.titre
+                                p= chapitre.resume
+            else
+                p You haven't published any stories yet!

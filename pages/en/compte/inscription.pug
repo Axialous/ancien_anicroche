@@ -1,0 +1,24 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block contenu
+    section#formulaire_inscription
+        div.ligne
+            form.fiche(method="post")
+                h1 Registration
+                label.input(for="pseudonyme_formulaire_inscription") Username
+                    input#pseudonyme_formulaire_inscription(name="pseudonyme", type="text", required)
+                label.input(for="adresse_mail_formulaire_inscription") Email address
+                    input#adresse_mail_formulaire_inscription(name="adresse_mail", type="email", required)
+                div.ligne
+                    label.input(for="mot_de_passe_formulaire_inscription") Password
+                        input#mot_de_passe_formulaire_inscription(name="mot_de_passe", type="password", required)
+                    label.input(for="confirmation_mot_de_passe_formulaire_inscription") Password confirmation
+                        input#confirmation_mot_de_passe_formulaire_inscription(name="confirmation_mot_de_passe", type="password", required)
+                button(type="submit") Registration
+            div.fiche
+                h1 Former user?
+                a.bouton.attirant(href="/compte/connexion") Login

@@ -1,0 +1,22 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+    - const visibilites_possibles = ['tous', 'auteurs'];
+
+block contenu
+    section
+        article
+            h1 Visibilité
+            form.fiche.petit(method="post")
+                h1 Modifier la visibilité
+                if ! chapitre.publie
+                    p Le chapitre ne sera visible qu'une fois publié.
+                select#visibilite_chapitre(name="visibilite")
+                    each visibilite_possible in visibilites_possibles
+                        if (chapitre.visibilite == visibilite_possible)
+                            option(value=`${visibilite_possible}`, selected)= visibilite_possible.slice(0, 1).toUpperCase() + visibilite_possible.slice(1)
+                        else
+                            option(value=`${visibilite_possible}`)= visibilite_possible.slice(0, 1).toUpperCase() + visibilite_possible.slice(1)
+                button(type="submit") Enregistrer les modifications

@@ -1,0 +1,19 @@
+:root {
+    --teinte-primaire: 27; /* 27 */
+    --teinte-secondaire: 13; /* 13 */
+}
+
+@font-face {
+    font-family: 'LexendExa';
+    src: url('/polices/LexendExa.ttf');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/polices/Merriweather-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Merriweather-Italic';
+    src: url('/polices/Merriweather-Italic.ttf');
+}

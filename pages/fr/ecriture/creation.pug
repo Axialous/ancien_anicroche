@@ -1,0 +1,13 @@
+extends ../etendues/base.pug
+
+block variables
+    - var erreur = erreur;
+    - var session = session;
+
+block contenu
+    section#formulaire_creation
+        form.fiche(method="post")
+            h1 Créer une nouvelle histoire
+            input#titre_formulaire_creation(name="titre", type="text", placeholder="Titre", required)
+            input#resume_formulaire_creation(name="resume", type="text", placeholder="Résumé")
+            button(type="submit") Créer l'histoire
